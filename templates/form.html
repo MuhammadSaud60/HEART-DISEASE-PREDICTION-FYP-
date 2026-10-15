@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+
+{% block  mainContent%}
+
+<section class="main">
+<h1 class="title">Enter Your Data Below</h1>
+<form action="/submit" method="post" id="dataForm">
+  <span class="error hide">All data is required.</span>
+  <div class="user-data">
+    <label for="age">Age</label>
+    <input type="text" name="age" id="age" required>
+ </div>
+ <div class="user-data span-2">
+  <label>Gender</label>
+  <div class="gender-group">
+    <label class="radio">
+      <input type="radio" name="sex" value="1" required>
+      Male
+    </label>
+    <label class="radio">
+      <input type="radio" name="sex" value="0" required>
+      Female
+    </label>
+  </div>
+</div>
+
+  <div class="user-data">
+    <label for="cp">CP <span class="info">(Chest pain type)</span></label>
+    <select name="chest_pain_type" id="cp" required>
+      <option value="typical_angina">Typical angina</option>
+      <option value="atypical_angina">Atypical angina</option>
+      <option value="non-anginal">Non-anginal pain</option>
+      <option value="asymptomatic">Asymptomatic</option>
+    </select>
+
+    <label for="trestbps">trestbps <span class="info">(Resting blood pressure in mm Hg)</span></label>
+    <input type="text" id="trestbps" name="resting_blood_pressure" required>
+  </div>
+
+  <div class="user-data">
+    <label for="chol">Chol <span class="info">(Serum cholesterol in mg/dl)</span></label>
+    <input type="text" name="cholesterol" id="chol" required>
+  </div>
+
+  <div class="user-data">
+    <label for="fbs">fbs <span class="info">(Fasting blood sugar > 120 mg/dl?)</span></label>
+    <select name="fasting_blood_sugar" id="fbs" required>
+      <option value="1">Yes (&gt;120)</option>
+      <option value="0">No (&lt;120)</option>
+    </select>
+  </div>
+
+  <div class="user-data">
+    <label for="restecg">restecg <span class="info">(Resting ECG results)</span></label>
+    <select name="Restecg" id="restecg" required>
+      <option value="normal">Normal</option>
+      <option value="ST-T_wave_abnormality">ST-T wave abnormality</option>
+      <option value="left_ventricular_hypertrophy">Left ventricular hypertrophy</option>
+    </select>
+  </div>
+
+  <div class="user-data">
+    <label for="thalach">thalach <span class="info">(Maximum heart rate achieved)</span></label>
+    <input type="text" name="max_heart_rate_achieved" id="thalch"  required>
+  </div>
+
+  <div class="user-data">
+    <label for="exang">exang <span class="info">(Exercise-induced angina?)</span></label>
+    <select name="exercise_induced_angina" id="exang"required>
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+  </div>
+
+  <div class="user-data">
+    <label for="oldpeak">oldpeak <span class="info">(ST depression induced by exercise)</span></label>
+    <input type="text" name="st_depression" id="oldpeak" required>
+  </div>
+
+  <div class="user-data">
+    <label for="slope">slope <span class="info">(Slope of peak exercise ST segment)</span></label>
+    <select name="st_slope_type" id="slope" required>
+      <option value="upsloping">Upsloping</option>
+      <option value="flat">Flat</option>
+      <option value="downsloping">Downsloping</option>
+    </select>
+  </div>
+
+  <div class="user-data">
+    <label for="ca">ca <span class="info">(Number of major vessels colored by fluoroscopy 0-4)</span></label>
+    <select name="num_major_vessels" id="ca"required>
+      <option value="0.0">0</option>
+      <option value="1.0">1</option>
+      <option value="2.0">2</option>
+      <option value="3.0">3</option>
+      <option value="4.0">4</option>
+    </select>
+  </div>
+
+  <div class="user-data">
+    <label for="thal">thal <span class="info">(Thalium stress test result)</span></label>
+    <select name="thalassemia_type" id="thal" required>
+      <option value="normal">Normal</option>
+      <option value="fixed_defect">Fixed defect</option>
+      <option value="reversable_defect">Reversible defect</option>
+    </select>
+  </div>
+
+
+  <button type="submit" id="actButton">Predict</button>
+</form>
+
+<div class="result hide">
+    <h2>Model Predict</h2>
+</div>
+</section>
+
+
+
+{% endblock mainContent %}

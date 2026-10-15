@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block mainContent %}
+<div class="pageTitle">DATA SOURCE</div>
+<div class="mainContent">
+
+<p>
+  The dataset used for training and testing all three machine learning models was the UCI Heart Disease dataset. It contains records of 920 patients. The dataset includes 15 different health-related features along with 1 target variable (num), which indicates the presence or absence of heart disease.
+</p>
+<h2 style="margin-top: 0.5em;">Data Summary</h2>
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Column Name</th>
+        <th>Non-Null Count</th>
+        <th>Data Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>id</td><td>920</td><td>int64</td></tr>
+      <tr><td>1</td><td>age</td><td>920</td><td>int64</td></tr>
+      <tr><td>2</td><td>sex</td><td>920</td><td>object</td></tr>
+      <tr><td>3</td><td>dataset</td><td>920</td><td>object</td></tr>
+      <tr><td>4</td><td>cp</td><td>920</td><td>object</td></tr>
+      <tr><td>5</td><td>trestbps</td><td>861</td><td>float64</td></tr>
+      <tr><td>6</td><td>chol</td><td>890</td><td>float64</td></tr>
+      <tr><td>7</td><td>fbs</td><td>830</td><td>object</td></tr>
+      <tr><td>8</td><td>restecg</td><td>918</td><td>object</td></tr>
+      <tr><td>9</td><td>thalch</td><td>865</td><td>float64</td></tr>
+      <tr><td>10</td><td>exang</td><td>865</td><td>object</td></tr>
+      <tr><td>11</td><td>oldpeak</td><td>858</td><td>float64</td></tr>
+      <tr><td>12</td><td>slope</td><td>611</td><td>object</td></tr>
+      <tr><td>13</td><td>ca</td><td>309</td><td>float64</td></tr>
+      <tr><td>14</td><td>thal</td><td>434</td><td>object</td></tr>
+      <tr><td>15</td><td>num</td><td>920</td><td>int64</td></tr>
+    </tbody>
+  </table>
+
+<h2 style="margin-top: 0.5em;">Missing Value table</h2>
+<table>
+    <thead>
+      <tr>
+        <th>Column Name</th>
+        <th>Missing (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>id</td><td>0.000000</td></tr>
+      <tr><td>age</td><td>0.000000</td></tr>
+      <tr><td>sex</td><td>0.000000</td></tr>
+      <tr><td>dataset</td><td>0.000000</td></tr>
+      <tr><td>cp</td><td>0.000000</td></tr>
+      <tr><td>trestbps</td><td>6.413043</td></tr>
+      <tr><td>chol</td><td>3.260870</td></tr>
+      <tr><td>fbs</td><td>9.782609</td></tr>
+      <tr><td>restecg</td><td>0.217391</td></tr>
+      <tr><td>thalch</td><td>5.978261</td></tr>
+      <tr><td>exang</td><td>5.978261</td></tr>
+      <tr><td>oldpeak</td><td>6.739130</td></tr>
+      <tr><td >slope</td><td >33.586957</td></tr>
+      <tr><td >ca</td><td >66.413043</td></tr>
+      <tr><td >thal</td><td >52.826087</td></tr>
+      <tr><td>num</td><td>0.000000</td></tr>
+    </tbody>
+  </table>
+
+  <p>Overall, the UCI Heart Disease dataset provides a robust foundation for evaluating classification algorithms in the medical domain. Its structured feature set and balanced target variable enable meaningful analysis and model development.</p>
+</div>
+{% endblock mainContent %}

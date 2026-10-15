@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block mainContent %}
+
+
+<section class="hero">
+    <div class="text">
+        <h2>HeartCare</h2>
+        <h3 class="sub-headline">Predict Your Heart Health with AI</h3>
+        <button class="cta" onclick="window.location.href='/form'">Predict Now</button>
+        <button class="learnMore" onclick="window.location.href='/about'">Learn More</button>
+    </div>
+</section>
+
+
+<section class="mainContent">
+
+<article class="heartDisease hidden">
+<div class="aboutDisease">
+<h3 class="heading hidden">Heart Disease</h3>
+<p class="hidden">
+    Heart disease represents a complex and multifaceted array of conditions that profoundly impact the structure and function of the heart. Far from being a singular ailment, this umbrella term encompasses a diverse spectrum of pathologies, including diseases affecting blood vessels such as coronary artery disease (CAD), irregularities in heart rhythm known as arrhythmias, and structural cardiac abnormalities present from birth, referred to as congenital heart defects.
+</p>
+</div>
+<div class="image">
+    <img src="/static/content/heartDisease.png" alt="">
+</div>
+</article>
+
+
+<article class="ProtectHeart hidden">
+    
+    <h3 class="heading">Protect Your Heart</h3>
+   
+    <div class="steps">
+        <div class="card hidden">
+            
+            <img src="/static/content/food.jpg" alt="">
+            <h4>Eat a Heart-Healthy Diet</h4>
+            <p class="card-text">
+
+                Eating foods that are low in unhealthy fats, sugar, and salt helps keep your blood vessels clear and your heart strong. Focus on whole, natural foods instead of packaged or fried items.
+            </p>
+        </div>
+
+        <div class="card hidden">
+           
+            <img src="/static/content/exercise.jpg" alt="">
+             <h4>Be Active Every Day</h4>
+            <p class="card-text">
+                Moving your body helps your heart pump blood more efficiently, lowers your blood pressure, and improves cholesterol levels. You don’t need a gym—simple activities count!
+            </p>
+        </div>
+
+
+        <div class="card hidden">
+            
+            <img src="/static/content/noSmoke.jpg" alt="">
+            <h4>Stop Smoking and Alcohol</h4>
+            <p class="card-text">
+                Smoking damages the lining of blood vessels and makes your heart work harder. Alcohol in large amounts can raise blood pressure and add extra calories.
+            </p>
+        </div>
+
+        <div class="card hidden">
+           
+            <img src="/static/content/stress.jpg" alt="">
+             <h4>Manage Stress</h4>
+            <p class="card-text">
+                Regular check-ups help you find problems (like high blood pressure or high cholesterol) early, when they are easier to treat. Managing stress keeps hormones in balance and prevents your heart from working too hard.
+            </p>
+        </div>
+
+    </div>
+
+
+</article>
+
+<article class="aboutModel hidden">
+    <h3 class="heading">About Our Model</h3>
+    <p class="hidden">
+        We use publicly available data from the UCI (University of California, Irvine) Machine Learning Repository to train machine learning models with high accuracy, for that train different models to and check their classfication report. The xg boost model perform well from other so we use xgboost classifier to predict new data.
+        The below show is ROC Curve which help us to identify which model is better classified the data. 
+    </p>
+
+    <img src="/static/content/roc_curve.png" alt="">
+
+
+    <button class="cta hidden" onclick="window.location.href='/form'">TRY IT NOW!</button>
+</article>
+
+
+<article class="howItWork">
+    <h3 class="heading" id="howItWork">How it Works</h3>
+    <div class="Projectsteps">
+    <div class="card">
+    <i class="fas fa-keyboard fa-3x" aria-hidden="true"></i>
+    <span class="sr-only">Step 1: Enter Data</span>
+    <h3>1. Enter Data</h3>
+  </div>
+  <div class="card">
+    <i class="fas fa-upload fa-3x" aria-hidden="true"></i>
+    <span class="sr-only">Step 2: Send to Model</span>
+    <h3>2. Send to Model</h3>
+  </div>
+  <div class="card">
+    <i class="fas fa-chart-line fa-3x" aria-hidden="true"></i>
+    <span class="sr-only">Step 3: Model Predicts</span>
+    <h3>3. Model Predicts</h3>
+  </div>
+  </div>
+</article>
+
+</section> 
+
+
+
+
+
+{% endblock mainContent %}

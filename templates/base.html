@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="shortcut icon" href="{{url_for('static', filename='content/favicon.ico')}}" type="image/x-icon">
+    <title>Heart Diease Prediction</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="icon" src="/static/content/icon.png" alt="">
+            <h2>HeartCare</h2>
+        </div>
+        <nav>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/dataSource">Data Source</a></li>
+        </nav>
+        <div class="bar">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    {% block mainContent%}
+    {% endblock mainContent %}
+
+
+    <footer>
+        <div class="top">
+            <div class="quickLinks">
+                <h2>Quick Links</h2>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/dataSource">Data Source</a></li>
+            </div>
+            <div class="team">
+                <h2>Team</h2>
+                <ol>
+                    <li>Muhammad Saud</li>
+                    <li>Saad Hussain</li>
+                    <li>Muhammad Anas</li>
+                </ol>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>FYP- Heart Disease Prediction 2025</p>
+        </div>
+
+    </footer>
+
+    <script src="/static/scripts/Animations.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
